@@ -23,6 +23,11 @@ Text Input (max_length) → Embedding (256) → LSTM (256)
    Combine Features (Add)
         ↓
    Dense (256) → Output (vocab_size)
+
+
+
+   ![Uploading image.png…]()
+
 📊 Dataset
 
 Dataset: Flickr8k (8,091 images with 40,455 captions)
@@ -65,23 +70,6 @@ Interactive Functions
 pythoncaption_image_improved("image_id")    # Caption specific image
 test_multiple_images(5)               # Test 5 random images
 run_interactive_demo()                # Interactive demo
-📁 Project Structure
-image-caption-generator/
-├── main_script.py              # Main training script
-├── improved_model.py           # Enhanced model version
-├── models/                     # Saved models
-│   ├── model_epoch_1.h5
-│   ├── model_epoch_2.h5
-│   └── best_model.h5
-├── data/                       # Dataset files
-│   ├── features.pkl            # Extracted image features
-│   ├── tokenizer.pkl           # Text tokenizer
-│   └── descriptions.txt        # Cleaned captions
-└── outputs/                    # Generated results
-    ├── model_architecture.png
-    └── sample_results/
-🔧 Technical Details
-Model Specifications
 
 CNN Backbone: Xception (pre-trained on ImageNet)
 RNN: LSTM with 256 hidden units
